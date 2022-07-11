@@ -7,4 +7,4 @@
     nginx_packages: nginx
 
   roles:
-    - webserver
+    - nginx_webserver
