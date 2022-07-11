@@ -5,9 +5,10 @@
   gather_facts: yes
   vars:
     nginx_packages: nginx
-    
+
   tasks:
     - name: Install Nginx packages
       package: 
         name: "{{ nginx_packages }}"
         state: latest
+      become: yes
