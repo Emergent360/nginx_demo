@@ -1,2 +1,4 @@
 ---
 # vars file for roles/nginx_webserver
+webserver_packages: 
+  - nginx

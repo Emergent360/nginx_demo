@@ -1,2 +1,21 @@
 ---
 # tasks file for roles/nginx_webserver
+- name: Install packages
+  package:
+    name: "{{ webserver_packages }}"
+    state: latest
+
+- name: Enable service
+  service:
+    name: nginx
+    enabled: yes
+    state: started
+
+- name: Add base NGINX configuration file
+  copy:
+    dest: /etc/nginx/nginx.conf
+    src: etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: Reload NGINX
