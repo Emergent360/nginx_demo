@@ -6,16 +6,6 @@
   vars:
     nginx_packages: nginx
 
-  tasks:
-    - name: Install Nginx packages
-      package: 
-        name: "{{ nginx_packages }}"
-        state: latest
-      become: yes
-
-    - name: Start service
-      service:
-        name: nginx
-        state: started
-        enabled: yes
+  roles:
+    - webserver
       become: yes
