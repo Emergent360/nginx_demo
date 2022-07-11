@@ -12,3 +12,8 @@
         name: "{{ nginx_packages }}"
         state: latest
       become: yes
+
+    - name: Start service
+      service:
+        name: nginx
+        state: reloaded
