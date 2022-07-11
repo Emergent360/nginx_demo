@@ -2,3 +2,6 @@
 # vars file for roles/nginx_webserver
 webserver_packages: 
   - nginx
+webserver_static_sites:
+  - name: site1.example.com
+    root: /usr/share/nginx/site1.example.com
