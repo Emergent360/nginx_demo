@@ -8,4 +8,3 @@
 
   roles:
     - webserver
-      become: yes
