@@ -1,0 +1,11 @@
+---
+
+- name: "Install Nginx"
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Install Nginx packages
+      package: 
+        name: "{{ nginx_packages }}"
+        state: latest
